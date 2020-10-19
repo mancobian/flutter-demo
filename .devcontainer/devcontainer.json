@@ -1,7 +1,7 @@
 {
     "name": "flutter-demo",
     "context": "..",
-    "dockerFile": "../Dockerfile",
+    "dockerFile": "./Dockerfile",
     "remoteUser": "developer",
     "mounts": [
     ],
@@ -11,6 +11,7 @@
     "runArgs": ["--privileged"],
     "extensions": ["dart-code.flutter"],
     "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/home/developer/workspace,type=bind,consistency=delegated",
-    "workspaceFolder": "/home/developer/workspace"
+    "workspaceFolder": "/home/developer/workspace",
+    "appPort": ["54321:54321"]
    }
    
